@@ -1,15 +1,12 @@
 language: node_js
 node_js:
-  - node
-sudo: required
-services:
-  - docker
+- node
 addons:
   sauce_connect:
     username: paperhive
   jwt:
-    secure: "uKlR70ccu1tljEvyvqpIX7yM76xnN8hIEjC/sK00xCu7FIxhVtoOMbqeojLdgDlpxH6uo6nrE6OiGnzzIbeSx/ybyyRxWr7gH1KaY3CVR4mkTTBoeWAShX84qpwqOUFz250usdcxYeYzm/xJoyiNTey9mZPr+4nWa9UFaDP2XfiElq2rv1psw3u0aK8A/Z7tjDfkpkmVsq5Xa8Q+HI7kiGtCAopBUPQyNZYr/kOeL5xmMJla6OeKt1iV9W5+jWPAG0WlLfS59rJ8u9rvIlxe4iPCx4Lev3vIwWWDcz6hmZoeNWr4LTOBFZBX5H4S5fSpxc5ZAN9xhyENpX0CYKIkxaWjKXTWDwl7IA7iga9p1/B4QMf6em/UGAlufvwBdP3ztHxnhXg5FtaoN9mvUONo6fS8C0Y+atjxOggIPSBw15BW+dQ38VLh9fyCiq2wL7SP3iTuRJ6JHP44Qm4QT2GS047t7M41koSo4RmLCqWtVWmeRW8qcyz56sTUo97D5KLK549uRvAvlEIA5imcp2aGl0KOWWtDjht6ISEKAfu96LiDOCOe3hC0puFU0o6G21fVL7V+rJf89yu+jdES+oSyo7gnFkFP+OdLr4xGPiiCa28X409x9m/P4VtcSwRqh2OBJcXHVnakNkqiq6JDYjCLdoubokyHLjxIESIfGw+ctnw="
+    secure: 3SxC13yRSZjYoLUv+dPQFaht73S81rlW8jz9XEZnmDVnpZbnzNvnM9GlOSiijzBEwunzLEWTJ2V1wlKBw1fdjgjBn1v99FAKu4OHmf7qi9O+GZH5Z/+OsCpWglx+Dbq+XC5W0YhGZAtfIEdQXW3hY1IWGiHof/hbsMNvYfmBkGCD0TI/HwJvfq8XVSWIS4QaH6fIRFtA0A+yU2TPMDGBH35AM3nWrdN665US8aGM8vH1xCF8RdrqCVc0lnFV6e7me9Gd5BPKuCXuQa9O8rsG3WSeCGh2NnJ3y2d2h2X4Dbvl/GB7kSGWnCxsTIWfKhae1XGh2x2uhEf2VytB1x5/JYgN15g2UUYFvPY8+dYFtqtGok7mWhTYN4gMQVfGYsufbhFtCUmUV00y8e/GWaov9ea3lwt1ZAiOjV5zbB6jlLcfXSEHRwyCmx/38NnoqI/zWxOvs3OjcCwgov9LFGrHzUsygrqGCwtHet+sAPg5e+/Nc2SUVedkbM5A/tIGYoKtJEAJyU3Wr32vNj+cjrQTe8P6yfUz9Nx2rlOoiELK3cumdBEEbPVpqCQf/P3HN1lo04Bddhz8cGrA5IQt/sC/dZDGgNFelOucHn/B5EqHXvXeuyeuc5JvdbajKzQhxWqdx+ZIQqXf+aRPFEzjkR9DhAswuhcj4WTluttX5538z/g=
 script:
-  - npm run build
-  - npm run test
-  - npm run e2e
+- npm run build
+- npm run test
+- npm run e2e
