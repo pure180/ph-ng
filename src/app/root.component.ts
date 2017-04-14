@@ -4,11 +4,11 @@ import { Title } from '@angular/platform-browser';
 import { Subscription } from 'rxjs';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'root',
+  templateUrl: './root.component.html',
+  styleUrls: ['./root.component.scss'],
 })
-export class AppComponent implements OnDestroy, OnInit {
+export class RootComponent implements OnDestroy, OnInit {
   private routeSub: Subscription;
   constructor(private router: Router, private title: Title) {}
 
