@@ -20,7 +20,7 @@ const navItems: NavItem[] = [{
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  private navItems = navItems;
+  public navItems = navItems;
 
   // TODO: do we actually need the ActivatedRoute here?
   constructor(private activatedRoute: ActivatedRoute) { }
