@@ -1,12 +1,14 @@
 import { TestBed, async } from '@angular/core/testing';
 
 import { RootComponent } from './root.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { AppModule } from './app.module';
+import { RoutingProviders } from './routing.test';
 
 describe('RootComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [RootComponent],
+      imports: [AppModule],
+      providers: [...RoutingProviders],
     }).compileComponents();
   }));
 
@@ -16,16 +18,10 @@ describe('RootComponent', () => {
     expect(app).toBeTruthy();
   }));
 
-  it(`should have as title 'app works!'`, async(() => {
-    const fixture = TestBed.createComponent(RootComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('app works!');
-  }));
-
-  it('should render title in a h1 tag', async(() => {
+  it('should have a navbar', async(() => {
     const fixture = TestBed.createComponent(RootComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('app works!');
+    expect(compiled.querySelector('navbar')).toBeTruthy();
   }));
 });

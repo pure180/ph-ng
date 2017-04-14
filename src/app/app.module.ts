@@ -3,22 +3,20 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { NavbarComponent } from './navbar/navbar.component';
+import { NavbarModule } from './navbar/navbar.module';
 import { RootComponent } from './root.component';
 import { RoutingModule } from './routing.module';
 
 @NgModule({
-  declarations: [
-    RootComponent,
-    NavbarComponent,
-  ],
+  declarations: [RootComponent],
   imports: [
-    RoutingModule,
+    NavbarModule,
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RoutingModule,
   ],
   providers: [],
-  bootstrap: [RootComponent]
+  bootstrap: [RootComponent],
 })
 export class AppModule { }
