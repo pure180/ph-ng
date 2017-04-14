@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - node
+sudo: required
+services:
+  - docker
+addons:
+  sauce_connect:
+    username: paperhive
+script:
+  - npm run build
+  - npm run test
+  - npm run e2e
