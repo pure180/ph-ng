@@ -1,28 +1,50 @@
-# PaperhiveFrontendNg
+# PaperHive frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+This is the frontend code of [PaperHive](https://paperhive.org). It is free and open source software licensed under the GPL 3.0.
 
-## Development server
+## Development
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Requirements
 
-## Code scaffolding
+* git
+* Node.js: the easiest way to install Node is via
+  [nvm](https://github.com/creationix/nvm)
+* [Angular CLI](https://github.com/angular/angular-cli/): `npm install -g @angular/cli`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+### Get started
+```
+git clone git@github.com:paperhive/paperhive-frontend.git --recursive
+cd paperhive-frontend
+npm install
+cp config.json.default config.json
+```
 
-## Build
+### Development server
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Run `ng serve` for a dev server and navigate to `http://localhost:4200/`. The page will automatically reload if you change any of the source files.
 
-## Running unit tests
+### Create new code
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+We use the [Angular CLI](https://github.com/angular/angular-cli/) for scaffolding new code. Example for generating a new component:
+```
+ng generate component component-name`
+```
+You can also use `ng generate directive/pipe/service/class/module`.
 
-## Running end-to-end tests
+### Run unit tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+Run `npm test` to execute the unit tests.
 
-## Further help
+### Run end-to-end tests
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Run `npm run e2e` to execute the end-to-end tests.
+
+### Production build
+
+Run `ng build -prod` for a production build. The build artifacts will be stored in the `dist/` directory.
+bla
+
+### Common problems
+
+ * Outdated dependencies: fix by running `rm -rf node_modules && npm install`
+ * Wrong API configured in `config.json`: make sure the `apiUrl` in `config.json` is the one you want. Default is `http://dev.paperhive.org/backend/master`.
