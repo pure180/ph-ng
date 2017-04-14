@@ -1,10 +1,10 @@
 import { Component, OnDestroy } from '@angular/core';
 import { ActivatedRouteSnapshot, Router, NavigationEnd } from '@angular/router';
 import { Title } from '@angular/platform-browser';
-import { Subscription } from 'rxjs';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
-  selector: 'app-root',
+  selector: 'ph-root',
   templateUrl: './root.component.html',
   styleUrls: ['./root.component.scss'],
 })

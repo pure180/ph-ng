@@ -22,6 +22,6 @@ describe('RootComponent', () => {
     const fixture = TestBed.createComponent(RootComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('navbar')).toBeTruthy();
+    expect(compiled.querySelector('ph-navbar')).toBeTruthy();
   }));
 });

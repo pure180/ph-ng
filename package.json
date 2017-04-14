@@ -1,7 +1,9 @@
 {
-  "name": "paperhive-frontend-ng",
+  "name": "paperhive-frontend",
   "version": "0.0.0",
-  "license": "MIT",
+  "license": "GPL-3.0",
+  "author": "André Gaul <andre@paperhive.org>",
+  "description": "Frontend of paperhive.org",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

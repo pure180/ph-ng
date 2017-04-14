@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Route } from '@angular/router';
 
 @Component({
-  selector: 'app-not-found',
+  selector: 'ph-not-found',
   templateUrl: './not-found.component.html',
   styleUrls: ['./not-found.component.css']
 })
@@ -14,5 +14,5 @@ export class NotFoundComponent {
       title: 'PaperHive – 404 page not found',
       httpCode: 404,
     },
-  }
+  };
 }

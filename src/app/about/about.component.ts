@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Route } from '@angular/router';
 
 @Component({
-  selector: 'app-about',
+  selector: 'ph-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css']
 })

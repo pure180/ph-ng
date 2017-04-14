@@ -15,7 +15,7 @@ const navItems: NavItem[] = [{
 }];
 
 @Component({
-  selector: 'navbar',
+  selector: 'ph-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })

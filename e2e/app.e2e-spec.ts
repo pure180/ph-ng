@@ -1,14 +1,14 @@
-import { PaperhiveFrontendNgPage } from './app.po';
+import { PaperhiveFrontendPage } from './app.po';
 
-describe('paperhive-frontend-ng App', () => {
-  let page: PaperhiveFrontendNgPage;
+describe('paperhive-frontend', () => {
+  let page: PaperhiveFrontendPage;
 
   beforeEach(() => {
-    page = new PaperhiveFrontendNgPage();
+    page = new PaperhiveFrontendPage();
   });
 
   it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('home works!');
   });
 });
