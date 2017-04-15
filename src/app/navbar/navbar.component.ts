@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { NavItem } from './navitem';
@@ -19,13 +19,9 @@ const navItems: NavItem[] = [{
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
+  public navItems = navItems;
 
-  private navItems = navItems;
-
+  // TODO: do we actually need the ActivatedRoute here?
   constructor(private activatedRoute: ActivatedRoute) { }
-
-  ngOnInit() {
-  }
-
 }
