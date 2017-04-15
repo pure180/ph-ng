@@ -1,3 +1,62 @@
 // Fancy PaperHive colors =>
+$ph-base-color: #037292;
+$ph-highlight-color: rgba(41,171,226,1);
+$ph-background-color: #fafafa;
+$ph-white: rgba(255, 255, 255, 1);
 
-$ph-blue: #29abe2;
+$ph-border-height: 1px;
+
+// navbar
+$ph-navbar-default-padding: 0px 0;
+$ph-navbar-border-color: #bfbfbf;
+$ph-navbar-border: 2px;
+$ph-navbar-height: 50px;
+
+// submenu
+$ph-subnav-height: 34px;
+
+// sidenav
+$ph-sidenav-small-width: 48px;
+$ph-sidenav-small-btn-height: 40px;
+$ph-sidenav-animation-duration: 0.8s;
+
+// footer
+$ph-footer-height: 50px;
+$ph-footer-border: 4px;
+$ph-footer-link-color: $ph-white;
+$ph-footer-copyright-color: darken($ph-footer-link-color, 30%);
+$ph-footer-link-hover-color: darken($ph-footer-link-color, 30%);
+
+// intro jumbotron
+$ph-intro-bg-color: rgba(0, 0, 0, 0.5);
+$ph-intro-color: white;
+
+$ph-bg-danger: #d9534f;
+$ph-danger-highlight-color: darken($ph-bg-danger, 15%);
+
+$ph-text-highlight-color: rgb(255, 255, 0);
+
+// shadow
+$ph-shadow-color: rgba(64, 64, 64, 0.3);
+$ph-shadow-size: 5px;
+$ph-shadow: 0 0 $ph-shadow-size 0px $ph-shadow-color;
+$ph-shadow-inset-top: inset 0 $ph-shadow-size $ph-shadow-size -$ph-shadow-size $ph-shadow-color;
+$ph-shadow-inset-bottom: inset 0 -$ph-shadow-size $ph-shadow-size -$ph-shadow-size $ph-shadow-color;
+
+// margin discussions
+$ph-margin-basecolor: white;
+$ph-margin-avatar-size: 38px;
+$ph-margin-avatar-arrow-padding: 4px;
+$ph-margin-avatar-bgcolor: #e4e4e4;
+$ph-margin-arrow-size: 8px;
+$ph-margin-border-color: #dbdbdb; //@panel-default-border;
+
+// margin controls
+$ph-margin-controls-height: $ph-margin-avatar-size;
+$ph-margin-controls-margin: $ph-margin-avatar-arrow-padding + $ph-margin-arrow-size;
+
+// badge
+$ph-badge-bg-color: #037292;
+$ph-badge-color: white;
+$ph-badge-font-size: 12px;
+$ph-badge-padding: 3px;
