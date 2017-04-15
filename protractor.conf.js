@@ -8,10 +8,6 @@ exports.config = {
   specs: [
     './e2e/**/*.e2e-spec.ts'
   ],
-  multiCapabilities: [{
-    'browserName': 'chrome'
-  }],
-  directConnect: true,
   baseUrl: 'http://localhost:4200/',
   framework: 'jasmine',
   jasmineNodeOpts: {
@@ -73,4 +69,9 @@ if (process.env.TRAVIS_JOB_NUMBER || process.env.SAUCE_ONDEMAND_BROWSERS) {
   exports.config.sauceKey = process.env.SAUCE_ACCESS_KEY || process.env.SAUCE_API_KEY;
   exports.config.sauceBuild = process.env.TRAVIS_BUILD_NUMBER;
   exports.config.multiCapabilities = saucelabsCapabilities;
+} else {
+  exports.config.capability = {
+    'browserName': 'chrome'
+  },
+  exports.config.directConnect = true;
 }
