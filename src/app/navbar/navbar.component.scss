@@ -1,0 +1,21 @@
+@import "~styles.scss";
+
+.navbar {
+  min-height: $ph-navbar-height;
+  margin-bottom: 0;
+
+  &-paperhive {
+    border-top: $ph-navbar-border solid $ph-highlight-color;
+  }
+
+  &-mobile {
+    @media (min-width: 768px) {
+      display: block;
+      width: auto;
+      height: auto;
+      padding-bottom: 0;
+      overflow: visible;
+    }
+
+  }
+}
