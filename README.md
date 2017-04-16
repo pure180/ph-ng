@@ -21,7 +21,7 @@ cp config.json.default config.json
 
 ### Development server
 
-Run `ng serve` for a dev server and navigate to `http://localhost:4200/`. The page will automatically reload if you change any of the source files.
+Run `npm run watch` for a dev server and navigate to `http://localhost:4200/`. The page will automatically reload if you change any of the source files.
 
 ### Create new code
 
@@ -41,7 +41,7 @@ Run `npm run e2e` to execute the end-to-end tests.
 
 ### Production build
 
-Run `ng build -prod` for a production build. The build artifacts will be stored in the `dist/` directory.
+Run `npm run build` for a production build. The build artifacts will be stored in the `dist/` directory.
 bla
 
 ### Common problems

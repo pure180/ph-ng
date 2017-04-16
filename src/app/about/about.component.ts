@@ -4,7 +4,7 @@ import { Route } from '@angular/router';
 @Component({
   selector: 'ph-about',
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css']
+  styleUrls: ['./about.component.scss']
 })
 export class AboutComponent {
   static route: Route = {
