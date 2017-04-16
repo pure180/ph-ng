@@ -12,7 +12,7 @@ const { CommonsChunkPlugin, UglifyJsPlugin } = require('webpack').optimize;
 const { AotPlugin } = require('@ngtools/webpack');
 
 const nodeModules = path.join(process.cwd(), 'node_modules');
-const entryPoints =  ['inline', 'polyfills', 'sw-register', 'styles', 'vendor', 'main'];
+const entryPoints =  ['inline', 'polyfills', 'sw-register', 'vendor', 'main', 'vendorstyles', 'styles'];
 
 const production = process.env.NODE_ENV === 'production';
 
@@ -27,7 +27,8 @@ const config = {
   entry: {
     main: ['./src/main.ts'],
     polyfills: ['./src/polyfills.ts'],
-    styles: ['./src/styles.scss']
+    styles: ['./src/scss/paperhive/index.scss'],
+    vendorstyles: ['./src/scss/vendor.scss'],
   },
   output: {
     path: path.join(process.cwd(), 'dist'),
@@ -50,18 +51,21 @@ const config = {
       },
       {
         test: /\.html$/,
-        loader: 'html-loader'
+        loader: 'html-loader?minimize=false'
       },
       {
         test: /\.(eot|svg)$/,
-        loader: 'file-loader?name=[name].[hash:20].[ext]'
+        loader: 'file-loader?name=assets/[name].[hash:20].[ext]'
       },
       {
         test: /\.(jpg|png|gif|otf|ttf|woff|woff2|cur|ani)$/,
-        loader: 'url-loader?name=[name].[hash:20].[ext]&limit=10000'
+        loader: 'url-loader?name=assets/[name].[hash:20].[ext]&limit=10000'
       },
       {
-        exclude: [path.join(process.cwd(), 'src/styles.scss')],
+        exclude: [
+          path.join(process.cwd(), 'src/scss/paperhive/index.scss'),
+          path.join(process.cwd(), 'src/scss/vendor.scss'),
+        ],
         test: /\.scss$/,
         loaders: [
           'exports-loader?module.exports.toString()',
@@ -71,7 +75,10 @@ const config = {
         ]
       },
       {
-        include: [path.join(process.cwd(), 'src/styles.scss')],
+        include: [
+          path.join(process.cwd(), 'src/scss/paperhive/index.scss'),
+          path.join(process.cwd(), 'src/scss/vendor.scss'),
+        ],
         test: /\.scss$/,
         loaders: ExtractTextPlugin.extract({
           use: [
@@ -105,21 +112,12 @@ const config = {
       showErrors: true,
       chunks: 'all',
       excludeChunks: [],
-      title: 'Webpack App',
       xhtml: true,
-      chunksSortMode: function sort(left, right) {
-        let leftIndex = entryPoints.indexOf(left.names[0]);
-        let rightindex = entryPoints.indexOf(right.names[0]);
-        if (leftIndex > rightindex) {
-            return 1;
-        }
-        else if (leftIndex < rightindex) {
-            return -1;
-        }
-        else {
-            return 0;
-        }
-    }
+      chunksSortMode: (left, right) => {
+        const leftIndex = entryPoints.indexOf(left.names[0]);
+        const rightindex = entryPoints.indexOf(right.names[0]);
+        return leftIndex > rightindex ? 1 : -1;
+      }
     }),
     new BaseHrefWebpackPlugin({}),
     new CommonsChunkPlugin({
@@ -148,7 +146,8 @@ const config = {
         'environments/environment.ts': 'environments/environment.prod.ts'
       },
       exclude: [],
-      tsConfigPath: 'src/tsconfig.app.json'
+      tsConfigPath: 'src/tsconfig.app.json',
+      skipCodeGeneration: !production,
     })
   ],
   node: {

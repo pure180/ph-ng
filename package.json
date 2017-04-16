@@ -6,13 +6,14 @@
   "description": "Frontend of paperhive.org",
   "scripts": {
     "ng": "ng",
-    "start": "webpack-dev-server --port=4200",
-    "build": "webpack",
+    "build": "NODE_ENV=production npm run clean && webpack --optimize-minimize",
+    "clean": "rimraf dist",
     "test": "karma start ./karma.conf.js",
     "lint": "ng lint",
     "e2e": "protractor ./protractor.conf.js",
     "prepree2e": "npm start",
-    "pree2e": "webdriver-manager update --standalone false --gecko false --quiet"
+    "pree2e": "webdriver-manager update --standalone false --gecko false --quiet",
+    "watch": "webpack-dev-server --history-api-fallback --port=4200"
   },
   "private": true,
   "dependencies": {
@@ -58,6 +59,7 @@
     "postcss-url": "^5.1.2",
     "protractor": "~5.1.0",
     "raw-loader": "^0.5.1",
+    "rimraf": "^2.6.1",
     "sass-loader": "^4.1.1",
     "script-loader": "^0.7.0",
     "source-map-loader": "^0.1.5",
@@ -67,6 +69,7 @@
     "tslint": "~4.5.0",
     "typescript": "~2.2.0",
     "url-loader": "^0.5.7",
-    "webpack-dev-server": "~2.3.0"
+    "webpack": "^2.4.1",
+    "webpack-dev-server": "^2.4.2"
   }
 }
