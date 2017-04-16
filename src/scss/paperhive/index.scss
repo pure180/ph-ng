@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../import";
+
+html, body {
+  height: 100%;
+}
+
+body {
+  padding-top: $ph-navbar-height + $ph-navbar-border;
+}
